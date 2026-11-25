@@ -58,7 +58,7 @@
     const h = HEADING_PRESETS.telugu;
     return {
       businessName: 'శ్రీ రాధాకృష్ణ విజిటబుల్స్, ఫ్రూట్స్, చికెన్, ఫిష్ & ఎగ్స్',
-      proprietor: 'ప్రొ॥ పి.ఎస్.ఎస్. సత్యనారాయణ',
+      proprietor: 'ప్రొ॥ పి.ఎన్.ఎస్. సత్యనారాయణ',
       phone: '9491841791, 9182574191',
       address: 'బొడ్డవర గ్రామం, ఎస్.కోట మండలం, విజయనగరం జిల్లా',
       logoDataUrl: '',
@@ -217,7 +217,9 @@
     const hSrc = src.headings && typeof src.headings === 'object' ? src.headings : {};
     return {
       businessName: typeof src.businessName === 'string' ? src.businessName : def.businessName,
-      proprietor: typeof src.proprietor === 'string' ? src.proprietor : def.proprietor,
+      proprietor: typeof src.proprietor === 'string'
+        ? (src.proprietor === 'ప్రొ॥ పి.ఎస్.ఎస్. సత్యనారాయణ' ? def.proprietor : src.proprietor)
+        : def.proprietor,
       phone: typeof src.phone === 'string' ? src.phone : def.phone,
       address: typeof src.address === 'string' ? src.address : def.address,
       logoDataUrl: typeof src.logoDataUrl === 'string' ? src.logoDataUrl : def.logoDataUrl,
