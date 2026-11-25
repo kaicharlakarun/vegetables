@@ -218,7 +218,7 @@
     return {
       businessName: typeof src.businessName === 'string' ? src.businessName : def.businessName,
       proprietor: typeof src.proprietor === 'string'
-        ? (src.proprietor === 'ప్రొ॥ పి.ఎస్.ఎస్. సత్యనారాయణ' ? def.proprietor : src.proprietor)
+        ? ((src.proprietor === 'ప్రొ॥ పి.ఎస్.ఎస్. సత్యనారాయణ' || src.proprietor === 'ప్రొ॥ పి.ఎన్.ఎస్. సత్యనారాయణ') ? def.proprietor : src.proprietor)
         : def.proprietor,
       phone: typeof src.phone === 'string' ? src.phone : def.phone,
       address: typeof src.address === 'string' ? src.address : def.address,

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -10,7 +11,9 @@
   <!-- Google Fonts: Inter (UI) & Noto Sans Telugu (Bills & Telugu Items) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap 5 CSS & Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +25,7 @@
   <link rel="stylesheet" href="css/billing.css">
   <link rel="stylesheet" href="css/print.css">
 </head>
+
 <body>
   <!-- =========================================================
        APPLICATION INTERFACE SHELL (Hidden during printing)
@@ -29,7 +33,8 @@
   <div class="app-shell">
     <!-- Mobile Navigation Header -->
     <header class="mobile-topbar d-lg-none">
-      <button type="button" class="btn btn-outline-secondary btn-sm mobile-menu-btn" id="btn-mobile-menu" aria-label="Open menu">
+      <button type="button" class="btn btn-outline-secondary btn-sm mobile-menu-btn" id="btn-mobile-menu"
+        aria-label="Open menu">
         <i class="bi bi-list fs-5"></i>
       </button>
       <div class="mobile-brand">
@@ -56,7 +61,8 @@
             <div class="brand-sub">Supply &amp; Cash Bills</div>
           </div>
         </div>
-        <button type="button" class="btn btn-sm btn-link text-muted d-lg-none p-1" id="btn-close-sidebar" aria-label="Close menu">
+        <button type="button" class="btn btn-sm btn-link text-muted d-lg-none p-1" id="btn-close-sidebar"
+          aria-label="Close menu">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
@@ -98,7 +104,8 @@
     <!-- Main Content Workspace -->
     <main class="app-main">
       <!-- Storage Health / Warning Banner -->
-      <div id="storage-warning-banner" class="alert alert-warning d-none align-items-center justify-content-between mb-3" role="alert">
+      <div id="storage-warning-banner"
+        class="alert alert-warning d-none align-items-center justify-content-between mb-3" role="alert">
         <div>
           <i class="bi bi-exclamation-triangle-fill me-2"></i>
           <span id="storage-warning-text"></span>
@@ -163,18 +170,22 @@
         </div>
 
         <!-- Drafts Alert Strip (if any saved drafts exist) -->
-        <div id="dashboard-drafts-banner" class="app-card p-3 mb-4 d-none border-warning-subtle bg-warning-subtle-custom">
+        <div id="dashboard-drafts-banner"
+          class="app-card p-3 mb-4 d-none border-warning-subtle bg-warning-subtle-custom">
           <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
             <div class="d-flex align-items-center gap-2">
               <i class="bi bi-pencil-square text-warning fs-5"></i>
               <div>
                 <span class="fw-semibold" id="dashboard-drafts-count">1 unfinished draft bill</span>
-                <span class="text-muted small d-block d-sm-inline ms-sm-2">Resume where you left off or review in Bill History.</span>
+                <span class="text-muted small d-block d-sm-inline ms-sm-2">Resume where you left off or review in Bill
+                  History.</span>
               </div>
             </div>
             <div class="d-flex gap-2">
-              <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-dash-view-drafts">View Drafts</button>
-              <button type="button" class="btn btn-sm btn-warning" id="btn-dash-resume-draft">Resume Latest Draft</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-dash-view-drafts">View
+                Drafts</button>
+              <button type="button" class="btn btn-sm btn-warning" id="btn-dash-resume-draft">Resume Latest
+                Draft</button>
             </div>
           </div>
         </div>
@@ -204,15 +215,21 @@
                 <h2 class="card-section-title mb-0">Quick Actions</h2>
               </div>
               <div class="p-3 d-grid gap-2">
-                <button type="button" class="btn btn-primary text-start d-flex align-items-center justify-content-between py-2 px-3" data-nav="billing">
+                <button type="button"
+                  class="btn btn-primary text-start d-flex align-items-center justify-content-between py-2 px-3"
+                  data-nav="billing">
                   <span><i class="bi bi-plus-circle me-2"></i>Create New Bill</span>
                   <i class="bi bi-chevron-right small"></i>
                 </button>
-                <button type="button" class="btn btn-outline-secondary text-start d-flex align-items-center justify-content-between py-2 px-3" id="btn-dash-add-customer">
+                <button type="button"
+                  class="btn btn-outline-secondary text-start d-flex align-items-center justify-content-between py-2 px-3"
+                  id="btn-dash-add-customer">
                   <span><i class="bi bi-person-plus me-2"></i>Add New Customer</span>
                   <i class="bi bi-chevron-right small"></i>
                 </button>
-                <button type="button" class="btn btn-outline-secondary text-start d-flex align-items-center justify-content-between py-2 px-3" data-nav="settings">
+                <button type="button"
+                  class="btn btn-outline-secondary text-start d-flex align-items-center justify-content-between py-2 px-3"
+                  data-nav="settings">
                   <span><i class="bi bi-download me-2"></i>Backup / Restore Data</span>
                   <i class="bi bi-chevron-right small"></i>
                 </button>
@@ -222,7 +239,8 @@
             <div class="app-card flex-grow-1">
               <div class="card-header-bar">
                 <h2 class="card-section-title mb-0">Recent Customers</h2>
-                <button type="button" class="btn btn-sm btn-link text-success text-decoration-none p-0" data-nav="customers">Manage</button>
+                <button type="button" class="btn btn-sm btn-link text-success text-decoration-none p-0"
+                  data-nav="customers">Manage</button>
               </div>
               <div id="dashboard-recent-customers" class="p-3"></div>
             </div>
@@ -240,10 +258,12 @@
               <h1 class="page-title mb-0" id="billing-page-title">Create New Bill</h1>
               <span class="badge rounded-pill text-bg-secondary" id="billing-status-badge">New Bill</span>
             </div>
-            <p class="page-subtitle mb-0" id="billing-page-subtitle">Enter vegetable items, quantities, or direct amounts to generate the cash bill</p>
+            <p class="page-subtitle mb-0" id="billing-page-subtitle">Enter vegetable items, quantities, or direct
+              amounts to generate the cash bill</p>
           </div>
           <div class="page-actions billing-top-actions d-flex flex-wrap gap-2">
-            <button type="button" class="btn btn-outline-danger" id="btn-billing-discard" title="Cancel and start a fresh bill">
+            <button type="button" class="btn btn-outline-danger" id="btn-billing-discard"
+              title="Cancel and start a fresh bill">
               <i class="bi bi-x-circle me-1"></i> Clear
             </button>
             <button type="button" class="btn btn-outline-secondary" id="btn-billing-save-draft">
@@ -252,7 +272,8 @@
             <button type="button" class="btn btn-outline-success" id="btn-billing-preview">
               <i class="bi bi-eye me-1"></i> Preview
             </button>
-            <button type="button" class="btn btn-whatsapp" id="btn-billing-share-whatsapp" title="Create the bill PDF and share it with WhatsApp">
+            <button type="button" class="btn btn-whatsapp" id="btn-billing-share-whatsapp"
+              title="Create the bill PDF and share it with WhatsApp">
               <i class="bi bi-whatsapp me-1" aria-hidden="true"></i> WhatsApp PDF
             </button>
             <button type="button" class="btn btn-primary" id="btn-billing-finalize">
@@ -264,7 +285,8 @@
         <!-- Revision Notice Banner (shown only when revising a finalized bill) -->
         <div id="billing-revision-banner" class="alert alert-info d-none mb-3">
           <i class="bi bi-info-circle-fill me-2"></i>
-          <strong>Revision Mode:</strong> You are editing a finalized bill (<span id="revision-bill-no"></span>). Saving will record a revision entry in edit history and mark the bill as Revised.
+          <strong>Revision Mode:</strong> You are editing a finalized bill (<span id="revision-bill-no"></span>). Saving
+          will record a revision entry in edit history and mark the bill as Revised.
         </div>
 
         <!-- Top Metadata Card: Bill Number, Date, Customer -->
@@ -282,12 +304,14 @@
               <input type="date" class="form-control" id="bill-date-input">
             </div>
             <div class="col-md-6">
-              <label for="bill-customer-select" class="form-label fw-semibold">Customer / Institution <span class="text-danger">*</span></label>
+              <label for="bill-customer-select" class="form-label fw-semibold">Customer / Institution <span
+                  class="text-danger">*</span></label>
               <div class="input-group">
                 <select class="form-select" id="bill-customer-select">
                   <option value="">-- Select Customer / Institution --</option>
                 </select>
-                <button type="button" class="btn btn-outline-success" id="btn-quick-add-customer" title="Add new customer">
+                <button type="button" class="btn btn-outline-success" id="btn-quick-add-customer"
+                  title="Add new customer">
                   <i class="bi bi-person-plus me-1"></i> Add
                 </button>
               </div>
@@ -301,21 +325,25 @@
           <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
             <div>
               <h2 class="card-section-title mb-0">Add Bill Item</h2>
-              <small class="text-muted">Choose billing type, enter details, and press <kbd>Enter</kbd> or click Add Item</small>
+              <small class="text-muted">Choose billing type, enter details, and press <kbd>Enter</kbd> or click Add
+                Item</small>
             </div>
             <!-- 3 Billing Type Toggle Buttons -->
             <div class="btn-group billing-type-switcher" role="group" aria-label="Item billing type">
-              <input type="radio" class="btn-check" name="entry-type" id="type-kg" value="kg" autocomplete="off" checked>
+              <input type="radio" class="btn-check" name="entry-type" id="type-kg" value="kg" autocomplete="off"
+                checked>
               <label class="btn btn-outline-success" for="type-kg">
                 <i class="bi bi-speedometer me-1"></i> KG Based
               </label>
 
-              <input type="radio" class="btn-check" name="entry-type" id="type-quantity" value="quantity" autocomplete="off">
+              <input type="radio" class="btn-check" name="entry-type" id="type-quantity" value="quantity"
+                autocomplete="off">
               <label class="btn btn-outline-success" for="type-quantity">
                 <i class="bi bi-box-seam me-1"></i> Quantity Based
               </label>
 
-              <input type="radio" class="btn-check" name="entry-type" id="type-direct" value="direct" autocomplete="off">
+              <input type="radio" class="btn-check" name="entry-type" id="type-direct" value="direct"
+                autocomplete="off">
               <label class="btn btn-outline-success" for="type-direct">
                 <i class="bi bi-currency-rupee me-1"></i> Direct Amount
               </label>
@@ -326,38 +354,51 @@
             <div class="row g-2 align-items-end">
               <!-- Item Name -->
               <div class="col-12 col-md-4">
-                <label for="entry-name" class="form-label small fw-semibold mb-1">Vegetable / Item Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control form-control-lg-input" id="entry-name" list="vegetable-suggestions" placeholder="e.g., Tomato / టమాటో" autocomplete="off">
+                <label for="entry-name" class="form-label small fw-semibold mb-1">Vegetable / Item Name <span
+                    class="text-danger">*</span></label>
+                <input type="text" class="form-control form-control-lg-input" id="entry-name"
+                  list="vegetable-suggestions" placeholder="e.g., Tomato / టమాటో" autocomplete="off">
               </div>
 
               <!-- TYPE A: KG Fields -->
               <div class="col-6 col-md-2 entry-group-kg">
-                <label for="entry-kg" class="form-label small fw-semibold mb-1">KG <span class="text-danger">*</span></label>
-                <input type="number" class="form-control form-control-lg-input" id="entry-kg" min="0" step="any" inputmode="decimal" placeholder="e.g., 20">
+                <label for="entry-kg" class="form-label small fw-semibold mb-1">KG <span
+                    class="text-danger">*</span></label>
+                <input type="number" class="form-control form-control-lg-input" id="entry-kg" min="0" step="any"
+                  inputmode="decimal" placeholder="e.g., 20">
               </div>
               <div class="col-6 col-md-2 entry-group-kg">
-                <label for="entry-kg-rate" class="form-label small fw-semibold mb-1">Rate (₹/KG) <span class="text-danger">*</span></label>
-                <input type="number" class="form-control form-control-lg-input" id="entry-kg-rate" min="0" step="any" inputmode="decimal" placeholder="e.g., 30">
+                <label for="entry-kg-rate" class="form-label small fw-semibold mb-1">Rate (₹/KG) <span
+                    class="text-danger">*</span></label>
+                <input type="number" class="form-control form-control-lg-input" id="entry-kg-rate" min="0" step="any"
+                  inputmode="decimal" placeholder="e.g., 30">
               </div>
 
               <!-- TYPE B: Quantity Fields -->
               <div class="col-4 col-md-2 entry-group-quantity d-none">
-                <label for="entry-qty" class="form-label small fw-semibold mb-1">Quantity <span class="text-danger">*</span></label>
-                <input type="number" class="form-control form-control-lg-input" id="entry-qty" min="0" step="any" inputmode="decimal" placeholder="e.g., 3">
+                <label for="entry-qty" class="form-label small fw-semibold mb-1">Quantity <span
+                    class="text-danger">*</span></label>
+                <input type="number" class="form-control form-control-lg-input" id="entry-qty" min="0" step="any"
+                  inputmode="decimal" placeholder="e.g., 3">
               </div>
               <div class="col-4 col-md-2 entry-group-quantity d-none">
                 <label for="entry-unit" class="form-label small fw-semibold mb-1">Unit (Optional)</label>
-                <input type="text" class="form-control form-control-lg-input" id="entry-unit" list="unit-suggestions" placeholder="Bags, No, Pic">
+                <input type="text" class="form-control form-control-lg-input" id="entry-unit" list="unit-suggestions"
+                  placeholder="Bags, No, Pic">
               </div>
               <div class="col-4 col-md-2 entry-group-quantity d-none">
-                <label for="entry-qty-rate" class="form-label small fw-semibold mb-1">Rate (₹) <span class="text-danger">*</span></label>
-                <input type="number" class="form-control form-control-lg-input" id="entry-qty-rate" min="0" step="any" inputmode="decimal" placeholder="e.g., 50">
+                <label for="entry-qty-rate" class="form-label small fw-semibold mb-1">Rate (₹) <span
+                    class="text-danger">*</span></label>
+                <input type="number" class="form-control form-control-lg-input" id="entry-qty-rate" min="0" step="any"
+                  inputmode="decimal" placeholder="e.g., 50">
               </div>
 
               <!-- TYPE C: Direct Amount Field (NO KG/Qty/Rate shown) -->
               <div class="col-12 col-md-4 entry-group-direct d-none">
-                <label for="entry-direct-amount" class="form-label small fw-semibold mb-1">Direct Amount (₹) <span class="text-danger">*</span></label>
-                <input type="number" class="form-control form-control-lg-input" id="entry-direct-amount" min="0" step="any" inputmode="decimal" placeholder="e.g., 100">
+                <label for="entry-direct-amount" class="form-label small fw-semibold mb-1">Direct Amount (₹) <span
+                    class="text-danger">*</span></label>
+                <input type="number" class="form-control form-control-lg-input" id="entry-direct-amount" min="0"
+                  step="any" inputmode="decimal" placeholder="e.g., 100">
               </div>
 
               <!-- Live Calculated Amount Preview -->
@@ -391,7 +432,8 @@
           <div class="card-header-bar">
             <div>
               <h2 class="card-section-title mb-0">Bill Items</h2>
-              <small class="text-muted">Edit quantities, rates, or direct amounts inline — totals update immediately</small>
+              <small class="text-muted">Edit quantities, rates, or direct amounts inline — totals update
+                immediately</small>
             </div>
             <div class="d-flex align-items-center gap-3">
               <span class="badge text-bg-light border text-dark" id="billing-item-count-badge">0 Items</span>
@@ -421,7 +463,8 @@
           <div id="billing-empty-state" class="empty-state py-5">
             <i class="bi bi-basket3 empty-state-icon"></i>
             <h3 class="h6 fw-semibold mt-2">No items added yet</h3>
-            <p class="text-muted small mb-0">Use the form above to add KG vegetables, quantity items, or direct amounts.</p>
+            <p class="text-muted small mb-0">Use the form above to add KG vegetables, quantity items, or direct amounts.
+            </p>
           </div>
 
           <!-- Grand Total Bar -->
@@ -487,10 +530,13 @@
             </div>
             <div class="col-6 col-lg-3">
               <label for="filter-customer" class="form-label small fw-semibold mb-1">Customer</label>
-              <input type="text" class="form-control form-control-sm" id="filter-customer" placeholder="Search customer...">
+              <input type="text" class="form-control form-control-sm" id="filter-customer"
+                placeholder="Search customer...">
             </div>
             <div class="col-12 d-md-none">
-              <button type="button" class="btn btn-outline-secondary btn-sm w-100 d-flex align-items-center justify-content-between" id="btn-toggle-history-filters" aria-expanded="false">
+              <button type="button"
+                class="btn btn-outline-secondary btn-sm w-100 d-flex align-items-center justify-content-between"
+                id="btn-toggle-history-filters" aria-expanded="false">
                 <span><i class="bi bi-funnel me-1"></i> Date, Month &amp; Status Filters</span>
                 <span class="badge text-bg-secondary d-none" id="history-active-filter-count">0</span>
               </button>
@@ -592,7 +638,8 @@
             <div class="col-md-8">
               <div class="input-group">
                 <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
-                <input type="text" class="form-control" id="customer-search-input" placeholder="Search by customer name, contact person, phone, or address...">
+                <input type="text" class="form-control" id="customer-search-input"
+                  placeholder="Search by customer name, contact person, phone, or address...">
               </div>
             </div>
             <div class="col-md-4 d-flex justify-content-md-end">
@@ -624,7 +671,8 @@
           <div id="customers-empty-state" class="empty-state py-5 d-none">
             <i class="bi bi-people empty-state-icon"></i>
             <h3 class="h6 fw-semibold mt-2">No customers found</h3>
-            <p class="text-muted small mb-3">Add your institutions, schools, or regular buyers to start billing quickly.</p>
+            <p class="text-muted small mb-3">Add your institutions, schools, or regular buyers to start billing quickly.
+            </p>
             <button type="button" class="btn btn-sm btn-primary" id="btn-empty-add-customer">Add Customer</button>
           </div>
         </div>
@@ -647,8 +695,10 @@
           <div>
             <h2 class="h6 fw-bold mb-1">Important: Browser Local Storage Notice</h2>
             <p class="mb-0 small text-secondary">
-              All your customers, bills, counter, and business settings are stored locally in <strong>this browser on this device</strong>.
-              Data is <strong>not automatically synchronized</strong> to other devices or browsers. Please use the <strong>Download Backup (JSON)</strong> button below regularly to keep a safe copy.
+              All your customers, bills, counter, and business settings are stored locally in <strong>this browser on
+                this device</strong>.
+              Data is <strong>not automatically synchronized</strong> to other devices or browsers. Please use the
+              <strong>Download Backup (JSON)</strong> button below regularly to keep a safe copy.
             </p>
           </div>
         </div>
@@ -663,11 +713,13 @@
                 </h2>
                 <div class="mb-3">
                   <label for="set-business-name" class="form-label fw-semibold">Business Name</label>
-                  <input type="text" class="form-control telugu-font" id="set-business-name" placeholder="Enter business name">
+                  <input type="text" class="form-control telugu-font" id="set-business-name"
+                    placeholder="Enter business name">
                 </div>
                 <div class="mb-3">
                   <label for="set-proprietor" class="form-label fw-semibold">Proprietor Name / Line</label>
-                  <input type="text" class="form-control telugu-font" id="set-proprietor" placeholder="e.g., ప్రొ॥ పి.ఎన్.ఎస్. సత్యనారాయణ">
+                  <input type="text" class="form-control telugu-font" id="set-proprietor"
+                    placeholder="e.g., ప్రొ॥ పి.ఎన్.ఎస్. సత్యనారాయణ">
                 </div>
                 <div class="mb-3">
                   <label for="set-phone" class="form-label fw-semibold">Phone Number(s)</label>
@@ -675,7 +727,8 @@
                 </div>
                 <div class="mb-3">
                   <label for="set-address" class="form-label fw-semibold">Business Address</label>
-                  <textarea class="form-control telugu-font" id="set-address" rows="2" placeholder="Enter full shop/supply address"></textarea>
+                  <textarea class="form-control telugu-font" id="set-address" rows="2"
+                    placeholder="Enter full shop/supply address"></textarea>
                 </div>
                 <div class="row g-2 mb-3">
                   <div class="col-sm-6">
@@ -694,13 +747,16 @@
                 <div>
                   <label for="set-logo-input" class="form-label fw-semibold">Optional Business Logo</label>
                   <div class="d-flex align-items-center gap-3 flex-wrap">
-                    <input type="file" class="form-control form-control-sm" id="set-logo-input" accept="image/*" style="max-width: 260px;">
+                    <input type="file" class="form-control form-control-sm" id="set-logo-input" accept="image/*"
+                      style="max-width: 260px;">
                     <div id="set-logo-preview-wrap" class="d-none align-items-center gap-2">
-                      <img id="set-logo-preview" src="" alt="Logo preview" style="max-height: 44px; max-width: 100px; border: 1px solid #dee2e6; padding: 2px; border-radius: 4px;">
+                      <img id="set-logo-preview" src="" alt="Logo preview"
+                        style="max-height: 44px; max-width: 100px; border: 1px solid #dee2e6; padding: 2px; border-radius: 4px;">
                       <button type="button" class="btn btn-sm btn-outline-danger" id="btn-remove-logo">Remove</button>
                     </div>
                   </div>
-                  <div class="form-text">Optional small logo printed in the bill header. Automatically resized to keep storage fast.</div>
+                  <div class="form-text">Optional small logo printed in the bill header. Automatically resized to keep
+                    storage fast.</div>
                 </div>
               </div>
             </div>
@@ -766,15 +822,18 @@
 
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" id="set-show-rupees-paise">
-                  <label class="form-check-label small" for="set-show-rupees-paise">Show <strong>రూ॥ / పై॥</strong> sub-header inside Amount column (matches paper pad)</label>
+                  <label class="form-check-label small" for="set-show-rupees-paise">Show <strong>రూ॥ / పై॥</strong>
+                    sub-header inside Amount column (matches paper pad)</label>
                 </div>
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" id="set-pad-rows">
-                  <label class="form-check-label small" for="set-pad-rows">Show minimum 15 pre-numbered rows on printed bill (matches paper pad)</label>
+                  <label class="form-check-label small" for="set-pad-rows">Show minimum 15 pre-numbered rows on printed
+                    bill (matches paper pad)</label>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="checkbox" id="set-show-words">
-                  <label class="form-check-label small" for="set-show-words">Print grand total in words at bottom-left of bill</label>
+                  <label class="form-check-label small" for="set-show-words">Print grand total in words at bottom-left
+                    of bill</label>
                 </div>
 
                 <div class="d-flex gap-2 pt-2">
@@ -799,7 +858,8 @@
                     <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
                       <div>
                         <h3 class="h6 fw-semibold">Full Backup (JSON)</h3>
-                        <p class="small text-muted">Download all customers, bills, bill counter, and settings into a single JSON backup file.</p>
+                        <p class="small text-muted">Download all customers, bills, bill counter, and settings into a
+                          single JSON backup file.</p>
                       </div>
                       <button type="button" class="btn btn-outline-success w-100" id="btn-backup-json">
                         <i class="bi bi-download me-1"></i> Export JSON Backup
@@ -810,7 +870,8 @@
                     <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
                       <div>
                         <h3 class="h6 fw-semibold">Bill History (Excel CSV)</h3>
-                        <p class="small text-muted">Export bill records in UTF-8 CSV format that opens cleanly in Microsoft Excel and Google Sheets.</p>
+                        <p class="small text-muted">Export bill records in UTF-8 CSV format that opens cleanly in
+                          Microsoft Excel and Google Sheets.</p>
                       </div>
                       <button type="button" class="btn btn-outline-secondary w-100" id="btn-settings-export-csv">
                         <i class="bi bi-file-earmark-spreadsheet me-1"></i> Export Bills CSV
@@ -821,7 +882,8 @@
                     <div class="border rounded p-3 h-100 d-flex flex-column justify-content-between">
                       <div>
                         <h3 class="h6 fw-semibold">Restore from Backup</h3>
-                        <p class="small text-muted">Select a previously exported JSON backup file. Validates structure and asks confirmation first.</p>
+                        <p class="small text-muted">Select a previously exported JSON backup file. Validates structure
+                          and asks confirmation first.</p>
                       </div>
                       <div>
                         <input type="file" class="d-none" id="restore-file-input" accept=".json,application/json">
@@ -979,7 +1041,8 @@
           <div class="modal-body">
             <input type="hidden" id="cust-id">
             <div class="mb-3">
-              <label for="cust-name" class="form-label fw-semibold">Customer / Institution Name <span class="text-danger">*</span></label>
+              <label for="cust-name" class="form-label fw-semibold">Customer / Institution Name <span
+                  class="text-danger">*</span></label>
               <input type="text" class="form-control" id="cust-name" placeholder="e.g., APTDC, School 1" required>
             </div>
             <div class="row g-2 mb-3">
@@ -1031,7 +1094,8 @@
               </select>
             </div>
             <div class="mb-3">
-              <label for="edit-item-name" class="form-label fw-semibold">Particulars / Item Name <span class="text-danger">*</span></label>
+              <label for="edit-item-name" class="form-label fw-semibold">Particulars / Item Name <span
+                  class="text-danger">*</span></label>
               <input type="text" class="form-control" id="edit-item-name" list="vegetable-suggestions">
             </div>
 
@@ -1093,7 +1157,8 @@
           Are you sure?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" id="confirmModalCancel">Cancel</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+            id="confirmModalCancel">Cancel</button>
           <button type="button" class="btn btn-danger" id="confirmModalOk">Confirm</button>
         </div>
       </div>
@@ -1135,5 +1200,5 @@
   <script src="js/settings.js" defer></script>
   <script src="js/app.js" defer></script>
 </body>
-</html>
 
+</html>
