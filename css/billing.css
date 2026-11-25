@@ -1,0 +1,353 @@
+/* =========================================================
+   BILLING WORKSPACE STYLES
+   ========================================================= */
+
+.form-control-lg-input {
+  min-height: 44px;
+  font-size: 0.98rem;
+}
+
+.entry-amount-preview {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.45rem 0.75rem;
+  background: var(--vbs-primary-tint);
+  border: 1px solid #bbf7d0;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--vbs-primary-hover);
+}
+
+.entry-add-btn {
+  min-height: 44px;
+  font-weight: 600;
+}
+
+.billing-type-switcher .btn {
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 0.42rem 0.85rem;
+}
+
+/* Quick Pick Chips */
+.quick-pick-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.quick-pick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.quick-chip {
+  border: 1px solid var(--vbs-border-strong);
+  background: #f8fafc;
+  color: var(--vbs-text);
+  font-size: 0.78rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.quick-chip:hover {
+  border-color: var(--vbs-primary);
+  background: var(--vbs-primary-tint);
+  color: var(--vbs-primary-hover);
+}
+
+/* Inline Editable Table */
+.billing-table .inline-input {
+  min-height: 36px;
+  font-size: 0.92rem;
+  padding: 0.28rem 0.55rem;
+}
+
+.billing-table .inline-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.billing-table .row-invalid {
+  background-color: #fef2f2 !important;
+}
+
+.type-pill {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.type-pill-kg {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.type-pill-quantity {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.type-pill-direct {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+
+/* Grand Total Bar */
+.billing-total-bar {
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border-top: 1px solid var(--vbs-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.grand-total-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.grand-total-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--vbs-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.grand-total-amount {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--vbs-primary-hover);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bottom Action Bar */
+.billing-bottom-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.billing-bottom-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* WhatsApp is a distinct delivery action, kept consistent across the composer and preview. */
+.btn-whatsapp {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: #128c7e;
+  --bs-btn-border-color: #128c7e;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #0c7367;
+  --bs-btn-hover-border-color: #0c7367;
+  --bs-btn-focus-shadow-rgb: 18, 140, 126;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: #075e54;
+  --bs-btn-active-border-color: #075e54;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 650;
+  box-shadow: 0 2px 5px rgba(7, 94, 84, 0.16);
+}
+
+.btn-whatsapp:focus-visible {
+  outline: 3px solid rgba(18, 140, 126, 0.35);
+  outline-offset: 2px;
+}
+
+.btn-whatsapp:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  box-shadow: none;
+}
+
+@media (max-width: 767.98px) {
+  .billing-top-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem !important;
+    width: 100%;
+  }
+  .billing-top-actions .btn {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .billing-type-switcher {
+    width: 100%;
+  }
+  .billing-type-switcher .btn {
+    flex: 1;
+    padding: 0.5rem 0.35rem;
+    font-size: 0.82rem;
+  }
+
+  /* Horizontal swipeable quick-pick chips on mobile */
+  .quick-pick-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .quick-pick-chips {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .quick-pick-chips::-webkit-scrollbar {
+    display: none;
+  }
+  .quick-chip {
+    flex-shrink: 0;
+    padding: 0.32rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  /* Responsive Mobile Card Layout for Bill Items Table */
+  .billing-table thead {
+    display: none;
+  }
+  .billing-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0.75rem;
+    background: var(--vbs-bg);
+  }
+  .billing-table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "sl type"
+      "name name"
+      "qty rate"
+      "amount actions";
+    gap: 0.5rem 0.6rem;
+    background: #ffffff;
+    border: 1px solid var(--vbs-border);
+    border-radius: 11px;
+    padding: 0.8rem;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+  .billing-table tbody td {
+    display: block;
+    border: none !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  .billing-table .cell-sl {
+    grid-area: sl;
+    font-size: 0.82rem;
+    align-self: center;
+  }
+  .billing-table .cell-sl::before {
+    content: "Item #";
+  }
+  .billing-table .cell-type {
+    grid-area: type;
+    justify-self: end;
+    align-self: center;
+  }
+  .billing-table .cell-name {
+    grid-area: name;
+  }
+  .billing-table .cell-name::before,
+  .billing-table .cell-qty::before,
+  .billing-table .cell-rate::before,
+  .billing-table .cell-amount::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--vbs-text-muted);
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .billing-table .cell-qty {
+    grid-area: qty;
+  }
+  .billing-table .cell-rate {
+    grid-area: rate;
+  }
+  .billing-table .row-type-direct .cell-qty,
+  .billing-table .row-type-direct .cell-rate {
+    display: none;
+  }
+  .billing-table .cell-amount {
+    grid-area: amount;
+    align-self: center;
+  }
+  .billing-table .cell-amount .item-row-amount-text {
+    font-size: 1.15rem;
+    color: var(--vbs-primary-hover);
+  }
+  .billing-table .cell-actions {
+    grid-area: actions;
+    justify-self: end;
+    align-self: end;
+  }
+  .billing-table .cell-actions .btn {
+    min-width: 40px;
+    min-height: 38px;
+  }
+  .billing-table .inline-input {
+    min-height: 40px;
+    font-size: 15px;
+  }
+
+  .billing-total-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.9rem 1rem;
+  }
+  .grand-total-display {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .grand-total-amount {
+    font-size: 1.5rem;
+  }
+
+  .billing-bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .billing-bottom-note {
+    text-align: center;
+  }
+  .billing-bottom-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .billing-finalize-cta {
+    grid-column: 1 / -1;
+    min-height: 46px;
+    font-weight: 600;
+  }
+}
+
